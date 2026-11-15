@@ -1,0 +1,242 @@
+ :root {
+  --paper: #f5eee5;
+  --paper-deep: #eee2d5;
+  --ink: #43352f;
+  --muted: #8c776c;
+  --rose: #a66e68;
+  --rose-dark: #85534f;
+  --line: #ddcfc1;
+  --white: #fffaf4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; }
+.paper-grain { position: fixed; inset: 0; pointer-events: none; z-index: 10; opacity: .12; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+a { color: inherit; text-decoration: none; }
+.topbar { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 7vw; border-bottom: 1px solid var(--line); position: relative; z-index: 2; }
+.brand { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 600; }
+.brand span { color: var(--rose); }
+nav { display: flex; gap: 30px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+nav a:hover, .primary-link:hover { color: var(--rose-dark); }
+.section { padding: 110px 12vw; }
+.hero { min-height: 680px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; position: relative; gap: 50px; padding-top: 80px; }
+.eyebrow { font-size: 9px; letter-spacing: .2em; color: var(--rose); font-weight: 600; }
+.script-note { font-family: "Homemade Apple", cursive; color: var(--rose); font-size: 17px; }
+h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 500; }
+h1 { font-size: clamp(62px, 8vw, 108px); line-height: .88; margin: 18px 0 24px; letter-spacing: -.045em; }
+h1 em, h2 em { color: var(--rose); font-weight: 400; }
+.hero-subtitle { max-width: 390px; line-height: 1.8; color: var(--muted); font-size: 14px; }
+.primary-link { display: inline-flex; gap: 25px; margin-top: 24px; padding-bottom: 9px; border-bottom: 1px solid var(--rose); color: var(--rose-dark); font-size: 12px; }
+.hero-art { min-height: 420px; position: relative; display: grid; place-items: center; }
+.polaroid { background: var(--white); padding: 13px 13px 17px; box-shadow: 0 12px 35px #604a3818; }
+.hero-polaroid { width: min(310px, 85%); transform: rotate(4deg); }
+.photo-placeholder { background: linear-gradient(145deg, #e4d4c6, #d6c0b4); display: grid; place-items: center; min-height: 190px; color: #8b7065; text-align: center; font-family: "Cormorant Garamond", serif; font-size: 19px; }
+.hero-polaroid .photo-placeholder { min-height: 300px; }
+.polaroid p, .polaroid figcaption { text-align: center; margin: 12px 0 0; font-family: "Homemade Apple", cursive; color: #79655b; font-size: 11px; }
+.tape { position: absolute; width: 85px; height: 23px; background: #d8b9a2aa; z-index: 1; }
+.tape-one { top: 38px; left: 25%; transform: rotate(-18deg); }
+.doodle { position: absolute; color: var(--rose); }
+.doodle-star { top: 60px; right: 7%; font-size: 38px; }
+.doodle-heart { bottom: 40px; left: 8%; font-size: 48px; transform: rotate(-15deg); }
+.side-note { position: absolute; right: -5%; bottom: 55px; font-family: "Homemade Apple", cursive; font-size: 11px; line-height: 2; color: var(--muted); transform: rotate(-7deg); }
+.scroll-cue { position: absolute; bottom: 30px; left: 12vw; color: var(--muted); font-size: 9px; letter-spacing: .18em; }
+.intro-section { background: var(--white); }
+h2 { font-size: clamp(43px, 5vw, 66px); line-height: .98; letter-spacing: -.025em; margin: 20px 0 42px; }
+.intro-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 8%; align-items: center; }
+.intro-photo { min-height: 330px; transform: rotate(-2deg); box-shadow: 10px 12px 0 var(--paper-deep); }
+.intro-text { color: var(--muted); line-height: 1.95; font-size: 14px; }
+.intro-text .script-note { margin-bottom: 15px; }
+.emphasis { color: var(--rose-dark); font-family: "Cormorant Garamond", serif; font-size: 23px; font-style: italic; }
+.timeline { margin: 100px auto 0; max-width: 760px; border-left: 1px solid var(--line); padding-left: 35px; }
+.timeline-item { position: relative; padding: 0 0 35px; }
+.timeline-dot { position: absolute; left: -41px; top: 3px; width: 11px; height: 11px; border-radius: 50%; background: var(--rose); border: 3px solid var(--white); outline: 1px solid var(--rose); }
+.timeline-label { color: var(--rose); font-size: 9px; letter-spacing: .17em; }
+.timeline-item h3 { font-size: 29px; margin: 4px 0; }
+.timeline-item p:last-child { color: var(--muted); font-size: 13px; }
+.gallery-section { text-align: center; }
+.section-intro { max-width: 440px; margin: -20px auto 55px; color: var(--muted); line-height: 1.8; font-size: 13px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; gap: 22px; }
+.gallery-grid .photo-placeholder { min-height: 190px; }
+.tilt-left { transform: rotate(-4deg); }
+.tilt-right { transform: rotate(3deg) translateY(25px); }
+.tilt-small { transform: rotate(-2deg) translateY(-12px); }
+.gallery-hint, .film-caption { color: var(--muted); font-family: "Homemade Apple", cursive; font-size: 12px; margin-top: 55px; }
+.film-section { background: var(--paper-deep); text-align: center; }
+.film-frame { max-width: 760px; margin: 0 auto; padding: 14px; background: #463a35; box-shadow: 0 18px 45px #463a3520; }
+.video-placeholder { min-height: 350px; background: linear-gradient(135deg, #6e5a50, #332b29); color: #f8eee5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+.play-icon { width: 52px; height: 52px; border: 1px solid #f8eee5aa; border-radius: 50%; display: grid; place-items: center; padding-left: 4px; }
+.video-placeholder p { font-family: "Cormorant Garamond", serif; font-size: 26px; margin: 0; }
+.video-placeholder small { max-width: 330px; color: #d8c7bb; line-height: 1.7; }
+.letter-section { background: var(--white); }
+.letter-card { max-width: 720px; margin: 0 auto; padding: clamp(28px, 6vw, 65px); border: 1px solid var(--line); background: #fffdf9; box-shadow: 12px 12px 0 var(--paper); position: relative; }
+.letter-card:before { content: "♡"; position: absolute; top: 20px; right: 28px; color: #c9958d; font-size: 25px; }
+.letter-card h2 { font-size: clamp(38px, 5vw, 58px); margin: 20px 0 28px; }
+.letter-card > p:not(.script-note):not(.signature) { color: var(--muted); font-size: 14px; line-height: 2; }
+.signature { font-family: "Homemade Apple", cursive; color: var(--rose); text-align: right; line-height: 2; margin-top: 35px; }
+.final-section { text-align: center; padding: 115px 20px; }
+.final-section h2 { margin-bottom: 22px; }
+.final-section > p:not(.eyebrow) { color: var(--muted); font-size: 13px; }
+.final-sparkle { color: var(--rose); font-size: 35px; }
+.final-name { font-family: "Homemade Apple", cursive; color: var(--rose-dark) !important; margin-top: 35px; }
+footer { display: flex; justify-content: space-between; padding: 25px 7vw; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; letter-spacing: .06em; }
+@media (max-width: 760px) {
+  .topbar { height: auto; min-height: 70px; padding: 18px 6vw; align-items: flex-start; gap: 15px; flex-direction: column; }
+  nav { gap: 18px; font-size: 11px; }
+  .section { padding: 75px 7vw; }
+  .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 70px; padding-bottom: 100px; }
+  .hero-art { min-height: 390px; }
+  .hero-polaroid { width: 250px; }
+  .hero-polaroid .photo-placeholder { min-height: 250px; }
+  .scroll-cue { left: 7vw; bottom: 35px; }
+  .side-note { right: 0; }
+  .intro-grid { grid-template-columns: 1fr; gap: 35px; }
+  .intro-photo { min-height: 260px; }
+  .timeline { margin-top: 65px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .gallery-grid .photo-placeholder { min-height: 155px; }
+  .tilt-right { transform: rotate(3deg); }
+  .tilt-small { transform: rotate(-2deg); }
+  .film-frame { padding: 8px; }
+  .video-placeholder { min-height: 230px; padding: 20px; }
+  footer { gap: 10px; flex-direction: column; text-align: center; }
+}
+
+/* =================================
+   IMAGE FIXES
+================================= */
+
+.photo-placeholder {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 240px;
+    min-height: 0;
+    display: block;
+    background: linear-gradient(145deg, #e4d4c6, #d6c0b4);
+}
+
+.photo-placeholder .actual-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Hero image */
+.hero-polaroid .photo-placeholder {
+    height: 300px;
+}
+
+/* Gallery images */
+.gallery-grid .photo-placeholder {
+    height: 190px;
+}
+
+/* Intro image */
+.intro-photo {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.intro-photo .actual-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =================================
+   VIDEO FIXES
+================================= */
+
+.film-frame {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px;
+    background: #463a35;
+    box-shadow: 0 18px 45px #463a3520;
+}
+
+.memory-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    background: #2b211d;
+    border-radius: 4px;
+}
+
+/* =================================
+   MUSIC BUTTON
+================================= */
+
+.music-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+
+    background: #a8736d;
+    color: #fffaf4;
+
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+
+    transition: 0.3s ease;
+}
+
+.music-button:hover {
+    transform: translateY(-3px);
+    background: #80534e;
+}
+
+.music-button:focus-visible {
+    outline: 2px solid var(--rose-dark);
+    outline-offset: 4px;
+}
+
+/* =================================
+   RESPONSIVE FIXES
+================================= */
+
+@media (max-width: 760px) {
+
+    .intro-photo {
+        height: 300px;
+    }
+
+    .hero-polaroid .photo-placeholder {
+        height: 250px;
+    }
+
+    .gallery-grid .photo-placeholder {
+        height: 155px;
+    }
+
+    .film-frame {
+        padding: 8px;
+    }
+
+    .memory-video {
+        max-height: 400px;
+    }
+
+    .music-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 11px 16px;
+    }
+
+}
